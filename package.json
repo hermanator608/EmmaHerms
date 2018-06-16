@@ -27,7 +27,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ChangoMan/gatsby-starter-strata.git"
+    "url": "https://github.com/hermanator608/EmmaHerms.git"
   },
   "scripts": {
     "dev": "gatsby develop",

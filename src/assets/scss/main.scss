@@ -102,6 +102,10 @@
 		}
 	}
 
+    .education_header {
+       margin: 0 0 0 0 !important;
+     }
+
 	h1 {
 		font-size: 2em;
 		line-height: 1.5em;
@@ -927,7 +931,7 @@
 		}
 
 		strong, b {
-			color: _palette(emma);
+			//color: _palette(emma);
 		}
 
 		h2, h3, h4, h5, h6 {
@@ -1500,4 +1504,62 @@
 	.\34 u24 {
 		width: 100%;
 	}
+}
+
+#header_name {
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 13s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 13s;
+  animation-iteration-count: infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  0%   { color:#F44336; }
+  7%   { color:#E91E63; }
+  14%  { color:#9C27B0; }
+  21%  { color:#673AB7; }
+  28%  { color:#3F51B5; }
+  35%  { color:#2196F3; }
+  42%  { color:#03A9F4; }
+  49%  { color:#00BCD4; }
+  56%  { color:#009688; }
+  63%  { color:#4CAF50; }
+  70%  { color:#8BC34A; }
+  77%  { color:#CDDC39; }
+  84%  { color:#FFEB3B; }
+  91%  { color:#FFC107; }
+  98%  { color:#FF9800; }
+  100% { color:#FF5722; }
+}
+
+/* Standard syntax */
+@keyframes example {
+  0%   { color:#F44336; }
+  7%   { color:#E91E63; }
+  14%  { color:#9C27B0; }
+  21%  { color:#673AB7; }
+  28%  { color:#3F51B5; }
+  35%  { color:#2196F3; }
+  42%  { color:#03A9F4; }
+  49%  { color:#00BCD4; }
+  56%  { color:#009688; }
+  63%  { color:#4CAF50; }
+  70%  { color:#8BC34A; }
+  77%  { color:#CDDC39; }
+  84%  { color:#FFEB3B; }
+  91%  { color:#FFC107; }
+  98%  { color:#FF9800; }
+  100% { color:#FF5722; }
+}
+
+.education_image {
+  //height: 75px;
+  width: 300px;
+}
+
+.education_div {
+  margin-bottom: 60px;
 }
