@@ -2,9 +2,9 @@ module.exports = {
   siteMetadata: {
     title: "Emma Herms",
     author: "Brandon Herman",
-    description: "Emma Herms Personal Website"
+    description: "Emma Herms' Personal Website"
   },
-  pathPrefix: '/',
+  pathPrefix: '/EmmaHerms',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
