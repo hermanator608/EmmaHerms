@@ -213,7 +213,7 @@
 
 	header {
 		p {
-			color: _palette(fg-light);
+			color: _palette(accent1, fg-light);
 			position: relative;
 			margin: 0 0 (_size(element-margin) * 0.75) 0;
 		}
@@ -1010,6 +1010,21 @@
 		}
 	}
 
+/* Top Image */
+
+	#topImage {
+		display: inline;
+		margin-left: $size-header-width;
+		max-width: 100% - $size-header-width;
+	}
+
+	#headerSkills {
+		margin-top: 5em;
+		ul {
+			list-style: none;
+		}
+	}
+
 /* Poptrox */
 
 	@include keyframes('spin') {
@@ -1241,6 +1256,13 @@
 				width: calc(100% - #{$size-header-width});
 			}
 
+			#topImage {
+				display: none;
+			}
+
+			#headerSkills {
+				display: none;
+			}
 	}
 
 /* Medium */

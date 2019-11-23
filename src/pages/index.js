@@ -1,11 +1,7 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import get from 'lodash/get'
+// import Link from 'gatsby-link'
+// import get from 'lodash/get'
 import Helmet from 'react-helmet'
-
-import UWL from '../assets/images/UW-L.png';
-import UofC from '../assets/images/UofC.gif';
-
 
 // import Lightbox from 'react-images'
 import Gallery from '../components/Gallery'
@@ -24,6 +20,12 @@ import full03 from '../assets/images/fulls/03.jpg'
 import full04 from '../assets/images/fulls/04.jpg'
 import full05 from '../assets/images/fulls/05.jpg'
 import full06 from '../assets/images/fulls/06.jpg'
+
+import Campus from '../assets/images/Campus.jpg';
+
+import Education from '../components/Education'
+import { UniversityOfChicago, UWLax, AboutMe, UChicagoResearchCoordinator, UChicagoResearchCoordinator2, UWLaxResearchCoordinator } from '../constants'
+import Research from '../components/Research'
 
 const DEFAULT_IMAGES = [
   { id: '1', src: full01, thumbnail: thumb01, caption: 'Photo 1', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
@@ -90,67 +92,45 @@ class HomeIndex extends React.Component {
           <title>{siteTitle}</title>
           <meta name="description" content={siteDescription} />
         </Helmet>
-
+        <img id='topImage' src={Campus} />
         <div id="main">
-
           <section id="one">
             <header className="major">
               <h2>About Me</h2>
             </header>
-            <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
-            <ul className="actions">
+            <p>{AboutMe}</p>
+            {/* <ul className="actions">
               <li><a href="#" className="button">Learn More</a></li>
-            </ul>
+            </ul> */}
           </section>
 
           <section id="two">
             <header className="major">
               <h2>Education</h2>
             </header>
-            <div className="education_div">
-              {/*<h2 className="education_header">*/}
-                {/*University of Chicago*/}
-              {/*</h2>*/}
-              <img src={UofC} className="education_image" />
-              <h3>Masters of Psychology • June 2018</h3>
-
-              <h4>Work</h4>
-              <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
-              <ul className="actions">
-                <li><a href="#" className="button">Learn More</a></li>
-              </ul>
-            </div>
-            <div className="education_div">
-              {/*<h2 className="education_header">*/}
-                {/*University of Wisconsin La Crosse*/}
-              {/*</h2>*/}
-              <img src={UWL} className="education_image" />
-              <h3>Bachelor of Arts in Psychology • June 2017</h3>
-
-              <h4>Work</h4>
-              <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
-              <ul className="actions">
-                <li><a href="#" className="button">Learn More</a></li>
-              </ul>
-            </div>
+            <Education school={UniversityOfChicago} />
+            <Education school={UWLax} />
           </section>
 
           <section id="three">
-            <h2>Recent Work</h2>
+            <h2>Research Experience</h2>
 
-            <Gallery images={DEFAULT_IMAGES.map(({ id, src, thumbnail, caption, description }) => ({
-              src,
-              thumbnail,
-              caption,
-              description
-            }))} />
-
-            <ul className="actions">
-              <li><a href="#" className="button">Full Portfolio</a></li>
-            </ul>
+            <Research job={UChicagoResearchCoordinator} />
+            <Research job={UChicagoResearchCoordinator2} />
+            <Research job={UWLaxResearchCoordinator} />
           </section>
 
-          <section id="four">
+          {/* <Gallery images={DEFAULT_IMAGES.map(({ id, src, thumbnail, caption, description }) => ({
+            src,
+            thumbnail,
+            caption,
+            description
+          }))} />
+
+          <ul className="actions">
+            <li><a href="#" className="button">Full Portfolio</a></li>
+          </ul> */}
+          {/* <section id="four">
             <h2>Get In Touch</h2>
             <p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
             <div className="row">
@@ -180,13 +160,13 @@ class HomeIndex extends React.Component {
                   </li>
                   <li>
                     <h3 className="icon fa-envelope-o"><span className="label">Email</span></h3>
-                    <a href="#">hello@untitled.tld</a>
+                    <a href="#">ehermslibero@gmail.com</a>
                   </li>
                 </ul>
               </div>
             </div>
             <Footer />
-          </section>
+          </section> */}
         </div>
 
       </div>
@@ -197,12 +177,12 @@ class HomeIndex extends React.Component {
 export default HomeIndex
 
 export const pageQuery = graphql`
-    query PageQuery {
-        site {
-            siteMetadata {
-                title
-                description
-            }
-        }
+  query PageQuery {
+    site {
+      siteMetadata {
+        title
+        description
+      }
     }
+  }
 `
