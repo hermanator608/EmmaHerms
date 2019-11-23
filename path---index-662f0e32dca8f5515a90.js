@@ -1,2 +1,2 @@
-webpackJsonp([0x81b8806e4260],{411:function(e,t){e.exports={data:{site:{siteMetadata:{title:"Emma Herms",description:"Emma Herms' Personal Website"}}},pathContext:{}}}});
+webpackJsonp([0x81b8806e4260],{381:function(e,t){e.exports={data:{site:{siteMetadata:{title:"Emma Herms",description:"Emma Herms' Personal Website"}}},pathContext:{}}}});
 //# sourceMappingURL=path---index-662f0e32dca8f5515a90.js.map
